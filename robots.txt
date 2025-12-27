@@ -1,0 +1,7 @@
+# robots.txt — tradingview-avis.com
+# Autorise l’indexation globale et déclare le sitemap XML.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tradingview-avis.com/sitemap.xml

@@ -1,0 +1,63 @@
+# ------------------------------
+# Canonical domain & HTTPS
+# ------------------------------
+http://tradingview-avis.com/*          https://tradingview-avis.com/:splat 301!
+http://www.tradingview-avis.com/*      https://tradingview-avis.com/:splat 301!
+https://www.tradingview-avis.com/*     https://tradingview-avis.com/:splat 301!
+
+# ------------------------------
+# Canonical paths
+# ------------------------------
+/index.html        /        301
+/en/index.html     /en/     301
+
+# ------------------------------
+# Favicon fallbacks (évite les 404)
+# ------------------------------
+/favicon.ico       /images/favicon.webp   200
+/favicon.png       /images/favicon.webp   200
+
+# ------------------------------
+# Ne jamais réécrire les assets statiques
+# (utile si un jour tu ajoutes un fallback SPA)
+# ------------------------------
+/assets/*          /assets/:splat         200
+/images/*          /images/:splat         200
+
+# ------------------------------
+# Language-based redirect (root only)
+# FR users restent sur /
+# Utilisateurs non-FR -> /en/
+# (302 pour laisser l’utilisateur changer de langue)
+# ------------------------------
+/                  /          200!   Language=fr
+/                  /en/       302!   Language=en
+/                  /en/       302!   Language=de
+/                  /en/       302!   Language=es
+/                  /en/       302!   Language=it
+/                  /en/       302!   Language=pt
+/                  /en/       302!   Language=nl
+/                  /en/       302!   Language=pl
+/                  /en/       302!   Language=sv
+/                  /en/       302!   Language=no
+/                  /en/       302!   Language=da
+/                  /en/       302!   Language=fi
+/                  /en/       302!   Language=ro
+/                  /en/       302!   Language=hu
+/                  /en/       302!   Language=cs
+/                  /en/       302!   Language=sk
+/                  /en/       302!   Language=sl
+/                  /en/       302!   Language=bg
+/                  /en/       302!   Language=el
+/                  /en/       302!   Language=ru
+/                  /en/       302!   Language=tr
+/                  /en/       302!   Language=ar
+/                  /en/       302!   Language=he
+/                  /en/       302!   Language=zh
+/                  /en/       302!   Language=ja
+/                  /en/       302!   Language=ko
+/                  /en/       302!   Language=th
+/                  /en/       302!   Language=id
+/                  /en/       302!   Language=ms
+/                  /en/       302!   Language=vi
+/                  /en/       302!   Language=hi
