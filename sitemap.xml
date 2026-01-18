@@ -21,65 +21,65 @@
 
   <!-- Blog hub -->
   <url>
-    <loc>https://tradingview-avis.com/blog.html</loc>
+    <loc>https://tradingview-avis.com/blog</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog"/>
   </url>
   <url>
-    <loc>https://tradingview-avis.com/en/blog.html</loc>
+    <loc>https://tradingview-avis.com/en/blog</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog"/>
   </url>
 
   <!-- Article -->
   <url>
-    <loc>https://tradingview-avis.com/blog-tradingview.html</loc>
+    <loc>https://tradingview-avis.com/blog-tradingview</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog-tradingview.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog-tradingview.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog-tradingview.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog-tradingview"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog-tradingview"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog-tradingview"/>
   </url>
   <url>
-    <loc>https://tradingview-avis.com/en/blog-tradingview.html</loc>
+    <loc>https://tradingview-avis.com/en/blog-tradingview</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog-tradingview.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog-tradingview.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog-tradingview.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog-tradingview"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog-tradingview"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog-tradingview"/>
   </url>
 
   <!-- Pages légales -->
   <url>
-    <loc>https://tradingview-avis.com/mentions-legales.html</loc>
+    <loc>https://tradingview-avis.com/mentions-legales</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/legal-notice.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/mentions-legales"/>
   </url>
   <url>
-    <loc>https://tradingview-avis.com/en/legal-notice.html</loc>
+    <loc>https://tradingview-avis.com/en/legal-notice</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/legal-notice.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/mentions-legales"/>
   </url>
 
   <url>
-    <loc>https://tradingview-avis.com/politique-de-confidentialite.html</loc>
+    <loc>https://tradingview-avis.com/politique-de-confidentialite</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/politique-de-confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/privacy-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/politique-de-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/politique-de-confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/politique-de-confidentialite"/>
   </url>
   <url>
-    <loc>https://tradingview-avis.com/en/privacy-policy.html</loc>
+    <loc>https://tradingview-avis.com/en/privacy-policy</loc>
     <lastmod>2025-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/politique-de-confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/privacy-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/politique-de-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/politique-de-confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/politique-de-confidentialite"/>
   </url>
 
 </urlset>

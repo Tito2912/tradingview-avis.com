@@ -40,10 +40,15 @@
 
   const pathMapFRtoEN = {
     "/": "/en/",
-    "/blog.html": "/en/blog.html",
-    "/blog-tradingview.html": "/en/blog-tradingview.html",
-    "/mentions-legales.html": "/en/legal-notice.html",
-    "/politique-de-confidentialite.html": "/en/privacy-policy.html"
+    "/blog": "/en/blog",
+    "/blog-tradingview": "/en/blog-tradingview",
+    "/mentions-legales": "/en/legal-notice",
+    "/politique-de-confidentialite": "/en/privacy-policy",
+    // Backward compatibility (old .html URLs)
+    "/blog.html": "/en/blog",
+    "/blog-tradingview.html": "/en/blog-tradingview",
+    "/mentions-legales.html": "/en/legal-notice",
+    "/politique-de-confidentialite.html": "/en/privacy-policy"
   };
   const pathMapENtoFR = Object.fromEntries(Object.entries(pathMapFRtoEN).map(([fr, en]) => [en, fr]));
 
