@@ -10,14 +10,20 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/"/>
+</url>
   <url>
     <loc>https://tradingview-avis.com/en/</loc>
     <lastmod>2026-01-24</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/"/>
+</url>
 
   <!-- Blog hub -->
   <url>
@@ -26,14 +32,20 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/blog"/>
+</url>
   <url>
     <loc>https://tradingview-avis.com/en/blog</loc>
     <lastmod>2025-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/blog"/>
+</url>
 
   <!-- Article -->
   <url>
@@ -42,14 +54,20 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog-tradingview"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog-tradingview"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog-tradingview"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/blog-tradingview"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/blog-tradingview"/>
+</url>
   <url>
     <loc>https://tradingview-avis.com/en/blog-tradingview</loc>
     <lastmod>2025-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/blog-tradingview"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/blog-tradingview"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/blog-tradingview"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/blog-tradingview"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/blog-tradingview"/>
+</url>
 
   <!-- Pages légales -->
   <url>
@@ -58,14 +76,20 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/mentions-legales"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/mentions-legales"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/legal-notice"/>
+</url>
   <url>
     <loc>https://tradingview-avis.com/en/legal-notice</loc>
     <lastmod>2025-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/mentions-legales"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/mentions-legales"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/legal-notice"/>
+</url>
 
   <url>
     <loc>https://tradingview-avis.com/politique-de-confidentialite</loc>
@@ -73,14 +97,20 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/politique-de-confidentialite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/politique-de-confidentialite"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/privacy-policy"/>
+</url>
   <url>
     <loc>https://tradingview-avis.com/en/privacy-policy</loc>
     <lastmod>2025-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/politique-de-confidentialite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/politique-de-confidentialite"/>
-  </url>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/privacy-policy"/>
+</url>
 
 </urlset>
 
