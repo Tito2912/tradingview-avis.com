@@ -25,6 +25,28 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/"/>
 </url>
 
+  <!-- Bitpanda -->
+  <url>
+    <loc>https://tradingview-avis.com/bitpanda</loc>
+    <lastmod>2026-02-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/bitpanda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/bitpanda"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/bitpanda"/>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/bitpanda"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/bitpanda"/>
+</url>
+  <url>
+    <loc>https://tradingview-avis.com/en/bitpanda</loc>
+    <lastmod>2026-02-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradingview-avis.com/bitpanda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradingview-avis.com/en/bitpanda"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradingview-avis.com/bitpanda"/>
+  
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradingview-avis.com/es/bitpanda"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradingview-avis.com/de/bitpanda"/>
+</url>
+
   <!-- Blog hub -->
   <url>
     <loc>https://tradingview-avis.com/blog</loc>
@@ -113,4 +135,3 @@
 </url>
 
 </urlset>
-

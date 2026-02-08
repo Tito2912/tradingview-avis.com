@@ -11,13 +11,17 @@ https://www.tradingview-avis.com/*     https://tradingview-avis.com/:splat 301!
 /index.html        /        301
 /en/index.html     /en/     301
 /blog.html         /blog    301
+/bitpanda.html     /bitpanda 301
 /en/blog.html      /en/blog 301
+/en/bitpanda.html  /en/bitpanda 301
 /blog-tradingview.html    /blog-tradingview      301
 /en/blog-tradingview.html /en/blog-tradingview   301
 /mentions-legales.html    /mentions-legales      301
 /en/legal-notice.html     /en/legal-notice       301
 /politique-de-confidentialite.html  /politique-de-confidentialite  301
 /en/privacy-policy.html   /en/privacy-policy     301
+/es/bitpanda.html  /es/bitpanda 301
+/de/bitpanda.html  /de/bitpanda 301
 
 # ------------------------------
 # Favicon fallbacks (évite les 404)

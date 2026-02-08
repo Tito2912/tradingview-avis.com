@@ -11,6 +11,8 @@
   ----------------------------- */
   const CONFIG = {
     AFF_URL: "https://fr.tradingview.com/?aff_id=152551",
+    // TODO: replace with your Bitpanda affiliate URL
+    BITPANDA_AFF_URL: "https://www.bitpanda.com/",
     GA4_ID: "G-EFTTSY036T",
     // Renseignez l’URL du déploiement Web App Apps Script (README.md fourni)
     NEWSLETTER_ENDPOINT: "", // ex: "https://script.google.com/macros/s/AKfycbx.../exec"
@@ -38,14 +40,21 @@
     return langs.some(l => (l || "").toLowerCase().startsWith("fr"));
   };
 
+  const isBot = () => {
+    const ua = (navigator.userAgent || "").toLowerCase();
+    return /(bot|crawler|spider|bingpreview|google|yahoo|duckduckbot|baiduspider|yandex|sogou|exabot|facebot|ia_archiver|headlesschrome|semrush)/.test(ua);
+  };
+
   const pathMapFRtoEN = {
     "/": "/en/",
+    "/bitpanda": "/en/bitpanda",
     "/blog": "/en/blog",
     "/blog-tradingview": "/en/blog-tradingview",
     "/mentions-legales": "/en/legal-notice",
     "/politique-de-confidentialite": "/en/privacy-policy",
     // Backward compatibility (old .html URLs)
     "/blog.html": "/en/blog",
+    "/bitpanda.html": "/en/bitpanda",
     "/blog-tradingview.html": "/en/blog-tradingview",
     "/mentions-legales.html": "/en/legal-notice",
     "/politique-de-confidentialite.html": "/en/privacy-policy"
@@ -100,6 +109,32 @@
         a.setAttribute("target", "_blank");
         a.setAttribute("rel", "noopener nofollow sponsored");
       }
+    });
+  }
+
+  function resolveAffiliateTarget(value) {
+    if (!value) return "";
+    if (/^https?:\/\//i.test(value)) return value;
+    if (value === "bitpanda") return CONFIG.BITPANDA_AFF_URL || "";
+    return "";
+  }
+
+  function hydrateAffiliateLinks() {
+    if (isBot()) return;
+    $$("a[data-aff]").forEach(a => {
+      if (a.dataset.affHydrated) return;
+      const target = resolveAffiliateTarget(a.getAttribute("data-aff"));
+      if (!target) return;
+
+      a.setAttribute("href", target);
+      a.dataset.affHydrated = "1";
+      a.setAttribute("target", "_blank");
+
+      const relTokens = new Set((a.getAttribute("rel") || "").split(/\s+/).filter(Boolean));
+      relTokens.add("noopener");
+      relTokens.add("nofollow");
+      relTokens.add("sponsored");
+      a.setAttribute("rel", Array.from(relTokens).join(" "));
     });
   }
 
@@ -436,6 +471,7 @@
     initNav();
     initFooterYear();
     enforceAffiliateCTAs();
+    hydrateAffiliateLinks();
     initLangRedirect();
     bindLangSwitcher();
     initCookieBanner();
