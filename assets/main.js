@@ -9,13 +9,12 @@
   /* -----------------------------
      0) CONFIG GLOBAL
   ----------------------------- */
-  const CONFIG = {
-    AFF_URL: "https://fr.tradingview.com/?aff_id=152551",
-    // TODO: replace with your Bitpanda affiliate URL
-    BITPANDA_AFF_URL: "https://www.bitpanda.com/",
-    GA4_ID: "G-EFTTSY036T",
-    // Renseignez l’URL du déploiement Web App Apps Script (README.md fourni)
-    NEWSLETTER_ENDPOINT: "", // ex: "https://script.google.com/macros/s/AKfycbx.../exec"
+	  const CONFIG = {
+	    AFF_URL: "https://fr.tradingview.com/?aff_id=152551",
+	    BITPANDA_AFF_URL: "https://bitpanda.pxf.io/7XePPV",
+	    GA4_ID: "G-EFTTSY036T",
+	    // Renseignez l’URL du déploiement Web App Apps Script (README.md fourni)
+	    NEWSLETTER_ENDPOINT: "", // ex: "https://script.google.com/macros/s/AKfycbx.../exec"
     // reCAPTCHA v3 (facultatif). Laisser vide pour désactiver.
     RECAPTCHA_SITE_KEY: "",  // ex: "6Lc...YOUR_SITE_KEY..."
     CONSENT_STORAGE_KEY: "tv_consent",

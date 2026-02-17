@@ -31,15 +31,44 @@
 <link href="/assets/styles.css" rel="stylesheet"/>
 <!-- JSON-LD: Breadcrumb -->
 <meta name="twitter:url" content="https://tradingview-avis.com/bitpanda"/><meta name="twitter:image:alt" content="Avis Bitpanda | Plateforme crypto (guide &amp; risques)"/><script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://tradingview-avis.com/"},
-      {"@type":"ListItem","position":2,"name":"Bitpanda","item":"https://tradingview-avis.com/bitpanda"}
-    ]
-  }
-  </script></head>
+	  {
+	    "@context":"https://schema.org",
+	    "@type":"BreadcrumbList",
+	    "itemListElement":[
+	      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://tradingview-avis.com/"},
+	      {"@type":"ListItem","position":2,"name":"Bitpanda","item":"https://tradingview-avis.com/bitpanda"}
+	    ]
+	  }
+	  </script>
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Bitpanda est-il adapté aux débutants ?",
+          "acceptedAnswer":{"@type":"Answer","text":"L’interface est généralement accessible, mais les crypto-actifs restent risqués. Commencez avec une taille adaptée et continuez à vous former."}
+        },
+        {
+          "@type":"Question",
+          "name":"Quels sont les risques des crypto-actifs ?",
+          "acceptedAnswer":{"@type":"Answer","text":"La volatilité peut entraîner des pertes rapides. N’investissez que ce que vous pouvez vous permettre de perdre."}
+        },
+        {
+          "@type":"Question",
+          "name":"Dois-je vérifier mon identité (KYC) ?",
+          "acceptedAnswer":{"@type":"Answer","text":"Selon la réglementation et les services utilisés, une vérification d’identité (KYC) peut être requise."}
+        },
+        {
+          "@type":"Question",
+          "name":"L’offre est-elle identique dans tous les pays ?",
+          "acceptedAnswer":{"@type":"Answer","text":"Non. Les produits, fonctionnalités et moyens de paiement peuvent varier selon le pays de résidence."}
+        }
+      ]
+    }
+  </script>
+</head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 <!-- Header -->
@@ -67,8 +96,10 @@
               FR ▾
             </button>
 <ul aria-label="Choisir la langue" class="lang__list" role="listbox">
-<li><a aria-current="page" href="/bitpanda" lang="fr">FR</a></li>
-<li><a href="/en/bitpanda" lang="en">EN</a></li>
+<li><a aria-current="page" href="/bitpanda" hreflang="fr" lang="fr">FR</a></li>
+<li><a href="/en/bitpanda" hreflang="en" lang="en">EN</a></li>
+<li><a href="/es/bitpanda" hreflang="es" lang="es">ES</a></li>
+<li><a href="/de/bitpanda" hreflang="de" lang="de">DE</a></li>
 </ul>
 </li>
 <li class="nav__cta">
@@ -99,6 +130,7 @@
 <li>Sécurité : 2FA &amp; bonnes pratiques</li>
 <li>Volatilité : risque de perte en capital</li>
 </ul>
+<p class="dim mt-16"><strong>Disclosure :</strong> certains liens de cette page sont sponsorisés (affiliation). Nous pouvons percevoir une commission si vous ouvrez un compte via ces liens, sans surcoût pour vous.</p>
 </div>
 <div class="hero__media">
 <picture>
@@ -132,6 +164,34 @@
 <p class="dim mt-16">Contenu informatif uniquement, pas un conseil en investissement.</p>
 </div>
 </section>
+<!-- CHECKLIST -->
+<section aria-label="Checklist avant inscription" class="section" id="checklist">
+<div class="container">
+<h2 class="section__title">Avant de vous inscrire : checklist rapide</h2>
+<div class="grid grid--2cols">
+<article class="card">
+<h3 class="h4">Sécurité</h3>
+<ul class="hero__bullets">
+<li>Activez la 2FA dès l’ouverture du compte.</li>
+<li>Utilisez un mot de passe unique (idéalement via un gestionnaire).</li>
+<li>Vérifiez vos paramètres (alertes, e-mail, téléphone) et restez vigilant face au phishing.</li>
+</ul>
+</article>
+<article class="card">
+<h3 class="h4">Frais</h3>
+<ul class="hero__bullets">
+<li>Vérifiez le coût total avant validation (spreads/frais selon le produit).</li>
+<li>Regardez les frais éventuels de dépôt/retrait selon la méthode de paiement.</li>
+<li>Anticipez les conversions si votre devise diffère.</li>
+</ul>
+</article>
+</div>
+<p class="dim mt-16">Les produits et conditions peuvent varier selon votre pays. Consultez toujours les informations officielles avant décision.</p>
+<div class="center mt-24">
+<a class="btn btn--primary" data-aff="bitpanda" href="#ouvrir-compte" rel="noopener nofollow sponsored noreferrer" target="_blank">Accéder à Bitpanda</a>
+</div>
+</div>
+</section>
 <!-- RISQUES -->
 <section aria-label="Avertissement sur les risques crypto" class="section section--alt" id="risques">
 <div class="container">
@@ -147,6 +207,38 @@
 <h2 class="h3">Prêt à explorer Bitpanda ?</h2>
 <p class="dim">Vérifiez les conditions selon votre pays et commencez avec une taille adaptée à votre profil.</p>
 <a class="btn btn--primary" data-aff="bitpanda" href="#ouvrir-compte" rel="noopener nofollow sponsored noreferrer" target="_blank">Accéder à Bitpanda</a>
+</div>
+</section>
+<!-- FAQ -->
+<section aria-label="FAQ Bitpanda" class="section" id="faq-bitpanda">
+<div class="container">
+<h2 class="section__title">FAQ Bitpanda</h2>
+<div class="accordion" id="faqAccordions">
+<details class="accordion__item">
+<summary>Bitpanda est-il adapté aux débutants ?</summary>
+<div class="accordion__content">
+<p>L’interface est généralement accessible, mais les crypto-actifs restent risqués. Commencez avec une taille adaptée et continuez à vous former.</p>
+</div>
+</details>
+<details class="accordion__item">
+<summary>Quels sont les risques des crypto-actifs ?</summary>
+<div class="accordion__content">
+<p>La volatilité peut entraîner des pertes rapides. N’investissez que ce que vous pouvez vous permettre de perdre.</p>
+</div>
+</details>
+<details class="accordion__item">
+<summary>Dois-je vérifier mon identité (KYC) ?</summary>
+<div class="accordion__content">
+<p>Selon la réglementation et les services utilisés, une vérification d’identité (KYC) peut être requise.</p>
+</div>
+</details>
+<details class="accordion__item">
+<summary>L’offre est-elle identique dans tous les pays ?</summary>
+<div class="accordion__content">
+<p>Non. Les produits, fonctionnalités et moyens de paiement peuvent varier selon le pays de résidence.</p>
+</div>
+</details>
+</div>
 </div>
 </section>
 </main>
