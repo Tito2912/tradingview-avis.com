@@ -143,7 +143,8 @@ pre { padding: var(--space-16); background: var(--surface); border-radius: var(-
 .header__inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: var(--space-16); }
 .logo img { filter: drop-shadow(0 2px 4px rgb(0 0 0 / .4)); }
 
-.nav { position: relative; }
+.nav { position: relative; display:flex; align-items:center; gap: var(--space-12); }
+.nav__actions{display:flex;align-items:center;gap:var(--space-12)}
 .nav__toggle {
   display: grid; place-items: center;
   width: 44px; height: 44px; border-radius: 12px;
@@ -182,15 +183,9 @@ pre { padding: var(--space-16); background: var(--surface); border-radius: var(-
 
 .nav__cta { margin-top: var(--space-8); }
 
-/* Desktop menu */
+/* Desktop menu (reste en burger, mais en panneau plus compact) */
 @media (min-width: 960px) {
-  .nav__menu {
-    position: static; display: flex; align-items: center; gap: var(--space-16);
-    background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none;
-    opacity: 1; transform: none; pointer-events: auto;
-  }
-  .nav__toggle { display: none; }
-  .nav__cta { margin-top: 0; }
+  .nav__menu{left:auto;right:var(--gutter);width:min(460px, calc(100vw - 40px));}
 }
 
 /* ------------------------------
