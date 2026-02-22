@@ -145,6 +145,23 @@ pre { padding: var(--space-16); background: var(--surface); border-radius: var(-
 
 .nav { position: relative; display:flex; align-items:center; gap: var(--space-12); }
 .nav__actions{display:flex;align-items:center;gap:var(--space-12)}
+.nav__review{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  color:rgba(255,255,255,.82);
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:4px;
+  text-decoration-thickness:2px;
+  opacity:.9;
+}
+.nav__review:hover{
+  opacity:1;
+  color:#fff;
+  background:rgba(255,255,255,.06);
+}
 .nav__toggle {
   display: grid; place-items: center;
   width: 44px; height: 44px; border-radius: 12px;
