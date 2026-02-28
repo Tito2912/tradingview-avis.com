@@ -30,7 +30,7 @@ export function ArticleLayout({ post }: { post: Post }) {
         ) : null}
       </header>
 
-      <div className="grid">
+      <div className="article-grid">
         <div className="stack">
           {post.quickAnswer?.length ? (
             <section aria-label="Réponse rapide" className="card">
@@ -72,7 +72,7 @@ export function ArticleLayout({ post }: { post: Post }) {
           ) : null}
         </div>
 
-        <aside aria-label="Table of contents" className="toc">
+        <aside aria-label="Table of contents" className="article-toc">
           <div className="card">
             <strong>Sur cette page</strong>
             <TableOfContents headings={post.headings} />
@@ -82,4 +82,3 @@ export function ArticleLayout({ post }: { post: Post }) {
     </article>
   );
 }
-

@@ -1,7 +1,11 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+
+export const viewport: Viewport = {
+  themeColor: '#2b78ff',
+};
 
 export const metadata: Metadata = {
   title: {
@@ -10,6 +14,9 @@ export const metadata: Metadata = {
   },
   description:
     'Avis TradingView : graphiques avancés, indicateurs, screeners, alertes et intégrations brokers. Prix, comparatif, FAQ et essai gratuit 30 jours.',
+  icons: {
+    icon: [{ url: '/images/favicon.webp', type: 'image/webp' }],
+  },
   metadataBase: new URL('https://tradingview-avis.com'),
   alternates: { canonical: '/' },
   openGraph: {
@@ -18,6 +25,14 @@ export const metadata: Metadata = {
     description:
       'Avis TradingView : graphiques avancés, indicateurs, screeners, alertes et intégrations brokers. Prix, comparatif, FAQ et essai gratuit 30 jours.',
     url: 'https://tradingview-avis.com',
+    images: [{ url: '/images/og-image.webp' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TradingView Avis',
+    description:
+      'Avis TradingView : graphiques avancés, indicateurs, screeners, alertes et intégrations brokers. Prix, comparatif, FAQ et essai gratuit 30 jours.',
+    images: ['/images/og-image.webp'],
   },
 };
 
