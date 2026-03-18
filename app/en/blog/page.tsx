@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { BlogHub, type BlogHubPostCard } from '@/components/BlogHub';
 import { getLocalizedBlogPosts } from '@/lib/content';
+import { buildAlternatesForBlogIndex, getOgImage } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 
@@ -8,13 +9,21 @@ export const metadata: Metadata = {
   title: 'TradingView Blog 2025 — Guides, tutorials & comparisons',
   description:
     'TradingView content hub: step-by-step guides, Pine Script tutorials, comparisons, best practices and use cases. Search through our articles.',
-  alternates: { canonical: '/en/blog' },
+  alternates: buildAlternatesForBlogIndex('en'),
   openGraph: {
     type: 'website',
     title: 'TradingView Blog',
     description:
       'TradingView content hub: step-by-step guides, Pine Script tutorials, comparisons, best practices and use cases. Search through our articles.',
     url: '/en/blog',
+    images: [{ url: getOgImage('en') }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TradingView Blog',
+    description:
+      'TradingView content hub: step-by-step guides, Pine Script tutorials, comparisons, best practices and use cases. Search through our articles.',
+    images: [getOgImage('en')],
   },
 };
 

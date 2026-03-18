@@ -2,42 +2,75 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-type Lang = 'fr' | 'en' | 'es' | 'de';
-
-function getLangFromPathname(pathname: string): Lang {
-  if (!pathname) return 'fr';
-  const p = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
-  if (p === '/en' || p.startsWith('/en/')) return 'en';
-  if (p === '/es' || p.startsWith('/es/')) return 'es';
-  if (p === '/de' || p.startsWith('/de/')) return 'de';
-  return 'fr';
-}
+import {
+  ABOUT_SLUGS,
+  CONTACT_SLUGS,
+  LEGAL_SLUGS,
+  METHODOLOGY_SLUGS,
+  PRIVACY_SLUGS,
+  SOURCES_SLUGS,
+  getLangFromPathname,
+  pageHref,
+} from '@/lib/site';
 
 export function SiteFooter() {
   const pathname = usePathname() ?? '/';
   const lang = getLangFromPathname(pathname);
-  const prefix = lang === 'fr' ? '' : `/${lang}`;
   const labels =
     lang === 'en'
-      ? { privacy: 'Privacy', legal: 'Legal notice', contact: 'Contact' }
+      ? {
+          about: 'About',
+          methodology: 'Methodology',
+          sources: 'Sources',
+          contact: 'Contact',
+          privacy: 'Privacy',
+          legal: 'Legal notice',
+        }
       : lang === 'es'
-        ? { privacy: 'Privacidad', legal: 'Aviso legal', contact: 'Contacto' }
+        ? {
+            about: 'Acerca de',
+            methodology: 'Metodología',
+            sources: 'Fuentes',
+            contact: 'Contacto',
+            privacy: 'Privacidad',
+            legal: 'Aviso legal',
+          }
         : lang === 'de'
-          ? { privacy: 'Datenschutz', legal: 'Rechtliche Hinweise', contact: 'Kontakt' }
-          : { privacy: 'Confidentialité', legal: 'Mentions légales', contact: 'Contact' };
+          ? {
+              about: 'Über uns',
+              methodology: 'Methodik',
+              sources: 'Quellen',
+              contact: 'Kontakt',
+              privacy: 'Datenschutz',
+              legal: 'Rechtliche Hinweise',
+            }
+          : {
+              about: 'À propos',
+              methodology: 'Méthodologie',
+              sources: 'Sources',
+              contact: 'Contact',
+              privacy: 'Confidentialité',
+              legal: 'Mentions légales',
+            };
 
-  const privacyHref = lang === 'fr' ? '/politique-de-confidentialite' : `${prefix}/privacy-policy`;
-  const legalHref = lang === 'fr' ? '/mentions-legales' : `${prefix}/legal-notice`;
+  const aboutHref = pageHref(lang, ABOUT_SLUGS[lang]);
+  const methodologyHref = pageHref(lang, METHODOLOGY_SLUGS[lang]);
+  const sourcesHref = pageHref(lang, SOURCES_SLUGS[lang]);
+  const contactHref = pageHref(lang, CONTACT_SLUGS[lang]);
+  const privacyHref = pageHref(lang, PRIVACY_SLUGS[lang]);
+  const legalHref = pageHref(lang, LEGAL_SLUGS[lang]);
 
   return (
     <footer className="footer">
       <div className="footer-inner">
         <div>© {new Date().getFullYear()} — tradingview-avis.com</div>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link href={aboutHref}>{labels.about}</Link>
+          <Link href={methodologyHref}>{labels.methodology}</Link>
+          <Link href={sourcesHref}>{labels.sources}</Link>
+          <Link href={contactHref}>{labels.contact}</Link>
           <Link href={privacyHref}>{labels.privacy}</Link>
           <Link href={legalHref}>{labels.legal}</Link>
-          <a href="mailto:contact.ecomshopfrance@gmail.com">{labels.contact}</a>
         </div>
       </div>
     </footer>

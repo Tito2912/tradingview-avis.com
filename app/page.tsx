@@ -1,34 +1,87 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getAllPages } from '@/lib/content';
+import { buildAlternatesForHome, getOgImage } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Accueil',
+  title: 'Guides TradingView (2026) — tradingview-avis.com',
   description:
-    'Accédez à toutes les pages du site : guides (TradingView, Bitpanda), articles et pages légales.',
-  alternates: { canonical: '/' },
+    'Guides pratiques TradingView : plans, limites, alertes, Pine Script et checklists pour choisir sans surprises. Contenu informatif.',
+  alternates: buildAlternatesForHome('fr'),
   openGraph: {
     type: 'website',
-    title: 'TradingView Avis',
+    title: 'Guides TradingView (2026) — tradingview-avis.com',
     description:
-      'Accédez à toutes les pages du site : guides (TradingView, Bitpanda), articles et pages légales.',
+      'Guides pratiques TradingView : plans, limites, alertes, Pine Script et checklists pour choisir sans surprises.',
     url: '/',
+    images: [{ url: getOgImage('fr') }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Guides TradingView (2026) — tradingview-avis.com',
+    description:
+      'Guides pratiques TradingView : plans, limites, alertes, Pine Script et checklists pour choisir sans surprises.',
+    images: [getOgImage('fr')],
   },
 };
 
 export default async function HomePage() {
   const pages = await getAllPages();
-  const pinned = new Set(['guide-tradingview', 'bitpanda']);
+  const pinned = new Set(['guide-tradingview', 'bitpanda', 'blog', 'methodologie', 'sources', 'a-propos', 'contact']);
 
   return (
     <div className="stack">
       <section className="hero">
-        <h1>Toutes les pages</h1>
-        <p>Guides, articles et pages légales.</p>
+        <h1>tradingview-avis.com : guides TradingView</h1>
+        <p>Des checklists claires pour choisir un plan, comprendre les limites et éviter les surprises. Contenu informatif.</p>
+      </section>
+
+      <section className="card" aria-label="Commencer">
+        <h2>Commencer</h2>
+        <ul className="list">
+          <li>
+            <Link href="/guide-tradingview">Guide TradingView (pilier)</Link>
+            <div className="muted">Graphiques, alertes, plans et points clés.</div>
+          </li>
+          <li>
+            <Link href="/blog-tradingview">TradingView : guide complet (2025)</Link>
+            <div className="muted">Fonctionnalités, tarifs, Pine Script, alertes, alternatives.</div>
+          </li>
+          <li>
+            <Link href="/bitpanda">Guide Bitpanda</Link>
+            <div className="muted">Alternative crypto : aperçu des fonctionnalités, frais (vue d’ensemble) et risques.</div>
+          </li>
+          <li>
+            <Link href="/blog">Blog</Link>
+            <div className="muted">Tous les articles et guides.</div>
+          </li>
+        </ul>
+      </section>
+
+      <section className="card" aria-label="Transparence">
+        <h2>Transparence</h2>
+        <ul className="list">
+          <li>
+            <Link href="/methodologie">Méthodologie</Link>
+            <div className="muted">Critères d’évaluation (plans, limites, data, workflows).</div>
+          </li>
+          <li>
+            <Link href="/sources">Sources</Link>
+            <div className="muted">Docs officielles et méthode de vérification rapide.</div>
+          </li>
+          <li>
+            <Link href="/a-propos">À propos</Link>
+            <div className="muted">Affiliation, mises à jour, corrections.</div>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+            <div className="muted">Question, correction, signalement.</div>
+          </li>
+        </ul>
       </section>
 
       <section className="card" aria-label="Pages du site">
-        <h2>Pages</h2>
+        <h2>Toutes les pages</h2>
         <ul className="list">
           <li>
             <Link href="/guide-tradingview">Guide TradingView</Link>

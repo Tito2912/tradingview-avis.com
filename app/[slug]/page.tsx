@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { ArticleLayout } from '@/components/ArticleLayout';
 import { getAllSlugs, getPostBySlug } from '@/lib/content';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd } from '@/lib/schema';
+import { buildAlternatesForPage, getOgImage } from '@/lib/seo';
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
@@ -15,16 +16,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
 
   const canonical = post.canonical ?? `/${post.slug}`;
+  const alternates = await buildAlternatesForPage({ lang: 'fr', slug: post.slug, canonical });
 
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical },
+    alternates,
     openGraph: {
       type: 'article',
       title: post.title,
       description: post.description,
       url: canonical,
+      images: [{ url: getOgImage('fr') }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: [getOgImage('fr')],
     },
   };
 }
@@ -62,4 +71,3 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     </>
   );
 }
-

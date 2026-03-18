@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { BlogHub, type BlogHubPostCard } from '@/components/BlogHub';
 import { getAllPosts } from '@/lib/content';
+import { buildAlternatesForBlogIndex, getOgImage } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 
@@ -8,13 +9,21 @@ export const metadata: Metadata = {
   title: 'Blog TradingView 2025 — Guides, tutoriels & comparatifs',
   description:
     'Hub de contenus TradingView : guides pas à pas, tutoriels Pine Script, comparatifs, bonnes pratiques et cas d’usage. Recherchez parmi nos articles.',
-  alternates: { canonical: '/blog' },
+  alternates: buildAlternatesForBlogIndex('fr'),
   openGraph: {
     type: 'website',
     title: 'Blog TradingView',
     description:
       'Hub de contenus TradingView : guides pas à pas, tutoriels Pine Script, comparatifs, bonnes pratiques et cas d’usage. Recherchez parmi nos articles.',
     url: '/blog',
+    images: [{ url: getOgImage('fr') }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog TradingView',
+    description:
+      'Hub de contenus TradingView : guides pas à pas, tutoriels Pine Script, comparatifs, bonnes pratiques et cas d’usage. Recherchez parmi nos articles.',
+    images: [getOgImage('fr')],
   },
 };
 

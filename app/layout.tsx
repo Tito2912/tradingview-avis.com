@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { LangHtmlUpdater } from '@/components/LangHtmlUpdater';
 
 export const viewport: Viewport = {
   themeColor: '#2b78ff',
@@ -38,8 +39,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <body>
+        <LangHtmlUpdater />
         <SiteHeader />
         <main className="container">{children}</main>
         <SiteFooter />

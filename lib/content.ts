@@ -7,8 +7,12 @@ import type { TocHeading } from '@/components/TableOfContents';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 const EXCLUDE_FROM_INDEX = new Set([
+  'a-propos',
   'mentions-legales',
+  'methodologie',
   'politique-de-confidentialite',
+  'sources',
+  'contact',
   'bitpanda',
   'guide-tradingview',
 ]);

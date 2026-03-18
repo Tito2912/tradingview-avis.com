@@ -25,6 +25,30 @@ const ROUTES: Array<Record<Lang, string>> = [
     de: '/de/privacy-policy',
   },
   {
+    fr: '/a-propos',
+    en: '/en/about',
+    es: '/es/about',
+    de: '/de/about',
+  },
+  {
+    fr: '/methodologie',
+    en: '/en/methodology',
+    es: '/es/methodology',
+    de: '/de/methodology',
+  },
+  {
+    fr: '/sources',
+    en: '/en/sources',
+    es: '/es/sources',
+    de: '/de/sources',
+  },
+  {
+    fr: '/contact',
+    en: '/en/contact',
+    es: '/es/contact',
+    de: '/de/contact',
+  },
+  {
     fr: '/blog-tradingview',
     en: '/en/blog/blog-tradingview',
     es: '/es/blog/blog-tradingview',
