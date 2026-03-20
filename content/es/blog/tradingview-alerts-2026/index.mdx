@@ -1,0 +1,112 @@
+---
+title: "Alertas en TradingView (2026): servidor, webhooks, plantillas y errores típicos"
+description: "Guía TradingView alertas 2026: alertas servidor vs cliente, multi-condición, webhooks, plantillas de naming y checklist de fiabilidad."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/es/blog/tradingview-alerts-2026"
+translationKey: "tradingview-alerts-2026"
+primaryKeyword: "alertas TradingView"
+jumpLinks:
+  - href: "#types"
+    label: "Tipos"
+  - href: "#conditions"
+    label: "Multi-condición"
+  - href: "#webhooks"
+    label: "Webhooks"
+  - href: "#templates"
+    label: "Plantillas"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Las alertas del servidor son clave porque siguen funcionando aunque cierres el navegador."
+  - "La fiabilidad viene de la simplicidad: pocas alertas, buen naming y test en un activo/timeframe antes de escalar."
+  - "Si usas webhooks, prueba tu payload y añade guardas (duplicados, latencia, mercado cerrado)."
+cta:
+  title: "Probar un set simple de alertas"
+  body: "Crea 3 alertas core (entrada, invalidación, salida) y confirma que se disparan como esperas."
+  buttonLabel: "Abrir TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "¿Las alertas funcionan si cierro TradingView?"
+    a: "Sí, si son alertas del servidor. Se calculan del lado de TradingView y te notifican por el canal elegido."
+  - q: "¿Por qué se disparan demasiado?"
+    a: "Normalmente porque la condición es muy amplia, el timeframe no es el correcto o se dispara intrabar sin filtro de cierre."
+  - q: "¿Para qué sirve un webhook en TradingView?"
+    a: "Para enviar un mensaje HTTP a un servicio externo (bot, servidor, automatización) cuando se dispara una alerta."
+  - q: "¿Cómo evito duplicados?"
+    a: "Naming consistente, triggers a cierre cuando conviene e idempotencia del lado receptor."
+internalLinks:
+  - href: "/es/guide-tradingview"
+    anchor: "Guía TradingView (pilar)"
+  - href: "/es/blog/tradingview-pricing-2026"
+    anchor: "Precios: elegir plan"
+  - href: "/es/blog/tradingview-templates-2026"
+    anchor: "Plantillas: layouts y alertas"
+  - href: "/es/blog/tradingview-pine-script-2026"
+    anchor: "Pine Script: señales limpias"
+  - href: "/es/sources"
+    anchor: "Fuentes y verificación"
+---
+
+Las alertas son uno de los mayores beneficios de TradingView: convierten el charting en un **sistema de notificación**.
+
+El fallo típico: crear demasiadas alertas y dejar de confiar en ellas.
+
+<h2 id="types">Tipos de alertas</h2>
+
+Según plan y funciones disponibles:
+
+- alertas de **precio** (niveles, rupturas),
+- alertas de **indicadores** (RSI, MA, MACD…),
+- alertas de **scripts/estrategias** (Pine Script),
+- condiciones compuestas (varios filtros).
+
+Regla: una alerta = una acción (entrar, salir, invalidar).
+
+<h2 id="conditions">Multi-condición: reduce ruido</h2>
+
+Estructura eficaz:
+
+- condición principal (breakout),
+- filtro (tendencia),
+- contexto (volumen/volatilidad),
+- trigger claro (cierre de vela vs intrabar).
+
+Reglas explícitas > reglas complejas.
+
+<h2 id="webhooks">Webhooks: automatización con disciplina</h2>
+
+Tiene sentido si conectas a:
+
+- tu servidor,
+- una herramienta de automatización,
+- un bot/plataforma externa.
+
+Checklist mínimo:
+
+- payload estable,
+- identificador de alerta (dedupe),
+- modo de trigger claro,
+- manejo del lado receptor (idempotencia, errores).
+
+<h2 id="templates">Plantillas: estandariza lo que funciona</h2>
+
+Biblioteca mínima:
+
+- 3 alertas core (entrada/stop/salida),
+- naming estándar (activo + timeframe + señal),
+- mensaje estándar (activo, timeframe, contexto).
+
+Las plantillas hacen el sistema reproducible.
+
+<h2 id="checklist">Checklist de fiabilidad</h2>
+
+- Sé por qué existe la alerta y qué acción dispara.
+- La probé en un activo/timeframe antes de duplicar.
+- Mantengo pocas alertas activas y legibles.
+- Sé si dispara intrabar o a cierre.
+- Si webhook: tengo guardas anti-duplicados.
+
+Una alerta fiable vale más que veinte ruidosas.
+

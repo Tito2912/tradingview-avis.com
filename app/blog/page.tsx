@@ -30,13 +30,28 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   const posts = await getAllPosts();
 
+  type Tag = BlogHubPostCard['tags'][number];
+
+  function inferTags(slug: string): Tag[] {
+    const tags = new Set<Tag>(['guide']);
+    if (slug === 'blog-tradingview') {
+      tags.add('comparison');
+      tags.add('invest');
+      return [...tags];
+    }
+    if (slug.includes('vs-') || slug.includes('alternatives')) tags.add('comparison');
+    if (slug.includes('pine')) tags.add('pine');
+    if (slug.includes('pricing') || slug.includes('brokers')) tags.add('invest');
+    return [...tags];
+  }
+
   const cards: BlogHubPostCard[] = posts.map((p) => ({
     href: `/${p.slug}`,
     title: p.title,
     description: p.description,
     dateLabel: p.date ? new Date(p.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' }) : undefined,
     readingTimeLabel: p.slug === 'blog-tradingview' ? '~12 min' : undefined,
-    tags: p.slug === 'blog-tradingview' ? ['guide', 'comparison', 'invest'] : ['guide'],
+    tags: inferTags(p.slug),
     image: p.slug === 'blog-tradingview' ? { src: '/images/hero-banner.webp', alt: 'Capture TradingView pour le guide complet' } : undefined,
     ctaLabel: 'Lire l’article',
   }));

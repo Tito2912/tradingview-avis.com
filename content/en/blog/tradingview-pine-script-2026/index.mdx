@@ -1,0 +1,105 @@
+---
+title: "Pine Script (TradingView) in 2026: start fast without bad practices"
+description: "Pine Script guide 2026: indicator vs strategy, good practices, backtesting basics, alerts, simple patterns and a quality checklist."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/en/blog/tradingview-pine-script-2026"
+translationKey: "tradingview-pine-script-2026"
+primaryKeyword: "Pine Script"
+jumpLinks:
+  - href: "#indicator-vs-strategy"
+    label: "Indicator vs strategy"
+  - href: "#patterns"
+    label: "Useful patterns"
+  - href: "#backtesting"
+    label: "Backtesting"
+  - href: "#alerts"
+    label: "Alerts"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Start with a simple indicator, then add rules, then move to a full strategy if you need backtesting."
+  - "Your priority is clarity: explicit triggers, no accidental repainting, and reproducible tests."
+  - "A good script standardizes a setup; it doesn’t “promise returns”."
+cta:
+  title: "Build your first clean script"
+  body: "A simple signal + one filter + an alert on bar close is the fastest path to a useful Pine workflow."
+  buttonLabel: "Open Pine Editor"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "What is Pine Script used for?"
+    a: "To build indicators and strategies inside TradingView, and to expose alert conditions based on script logic."
+  - q: "Indicator or strategy to start with?"
+    a: "Indicator first: understand the signal. Then a strategy if you want to backtest entry/exit logic."
+  - q: "What is “repainting”?"
+    a: "A signal that looks perfect in history but changes when the bar closes. Define triggers clearly and test close-based rules when appropriate."
+  - q: "Can Pine trigger a webhook?"
+    a: "Indirectly: Pine defines conditions; TradingView alerts use those conditions and can send webhooks."
+internalLinks:
+  - href: "/en/guide-tradingview"
+    anchor: "TradingView guide (pillar)"
+  - href: "/en/blog/blog-tradingview"
+    anchor: "TradingView: complete guide"
+  - href: "/en/blog/tradingview-alerts-2026"
+    anchor: "TradingView alerts: a practical system"
+  - href: "/en/blog/tradingview-templates-2026"
+    anchor: "Templates: reuse setups"
+  - href: "/en/sources"
+    anchor: "Sources and checks"
+---
+
+Pine Script is powerful when you use it to **clarify** a setup, not to chase complexity.
+
+Your goal: a signal that is readable, testable, and reproducible.
+
+<h2 id="indicator-vs-strategy">Indicator vs strategy</h2>
+
+- An **indicator** displays state (trend, momentum, levels).
+- A **strategy** formalizes entries/exits and supports backtesting.
+
+Best learning path: indicator → alerts → strategy.
+
+<h2 id="patterns">Useful patterns (simple and effective)</h2>
+
+Good starter patterns:
+
+- one main signal (breakout),
+- one trend filter,
+- one quality filter (volume),
+- close-based trigger to reduce noise,
+- clear invalidation.
+
+Coherence beats sophistication.
+
+<h2 id="backtesting">Backtesting: know what you test</h2>
+
+Backtests help when:
+
+- rules are explicit,
+- timeframe is stable,
+- you accept parameter sensitivity and market regimes.
+
+Avoid over-optimization: it often overfits.
+
+<h2 id="alerts">Alerts: your first “production” use case</h2>
+
+Great exercise:
+
+1. Pine condition,
+2. TradingView alert,
+3. stable message (symbol, timeframe, signal),
+4. optional webhook.
+
+That’s how scripts become workflows.
+
+<h2 id="checklist">Quality checklist</h2>
+
+- Signal is explainable in one sentence.
+- Trigger mode is clear (intrabar vs close).
+- Script avoids surprise behavior (accidental repainting).
+- Backtest assumptions make sense.
+- Alerts are named and tested.
+
+If you meet this checklist, you already have a “clean” script.
+

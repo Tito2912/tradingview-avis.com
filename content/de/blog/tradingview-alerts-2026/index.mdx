@@ -1,0 +1,110 @@
+---
+title: "TradingView Alerts (2026): serverseitig, Webhooks, Templates & typische Fehler"
+description: "TradingView Alerts Guide 2026: Server vs Client, Multi-Conditions, Webhooks, Naming-Templates und Checkliste für Zuverlässigkeit."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/de/blog/tradingview-alerts-2026"
+translationKey: "tradingview-alerts-2026"
+primaryKeyword: "TradingView Alerts"
+jumpLinks:
+  - href: "#types"
+    label: "Arten"
+  - href: "#conditions"
+    label: "Multi-Conditions"
+  - href: "#webhooks"
+    label: "Webhooks"
+  - href: "#templates"
+    label: "Templates"
+  - href: "#checklist"
+    label: "Checkliste"
+quickAnswer:
+  - "Server-Alerts sind wertvoll, weil sie auch laufen, wenn du den Browser schließt."
+  - "Zuverlässigkeit kommt aus Einfachheit: wenige Alerts, gutes Naming, Test auf einem Markt/Timeframe bevor du skalierst."
+  - "Bei Webhooks: Payload testen und Guardrails einbauen (Duplikate, Latenz, Markt geschlossen)."
+cta:
+  title: "Ein simples Alert-Set testen"
+  body: "Erstelle 3 Kern-Alerts (Entry, Invalidation, Exit) und prüfe, ob sie wie erwartet auslösen."
+  buttonLabel: "TradingView öffnen"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Funktionieren Alerts, wenn TradingView geschlossen ist?"
+    a: "Ja, bei serverseitigen Alerts. Sie laufen auf TradingViews Seite und benachrichtigen dich über den gewählten Kanal."
+  - q: "Warum triggern meine Alerts zu oft?"
+    a: "Meist sind Bedingungen zu breit, der Timeframe passt nicht oder du triggerst intrabar ohne Close-Filter."
+  - q: "Wofür ist ein Webhook?"
+    a: "Um bei einem Alert ein HTTP-Event an einen externen Dienst (Bot/Server/Automation) zu senden."
+  - q: "Wie vermeide ich Duplikate?"
+    a: "Konsequentes Naming, Close-basierte Trigger wenn sinnvoll und Idempotenz auf der Empfängerseite."
+internalLinks:
+  - href: "/de/guide-tradingview"
+    anchor: "TradingView Guide (Pillar)"
+  - href: "/de/blog/tradingview-pricing-2026"
+    anchor: "Preise: Planwahl"
+  - href: "/de/blog/tradingview-templates-2026"
+    anchor: "Templates: Layouts und Alerts"
+  - href: "/de/blog/tradingview-pine-script-2026"
+    anchor: "Pine Script: saubere Signale"
+  - href: "/de/sources"
+    anchor: "Quellen & Checks"
+---
+
+Alerts sind einer der größten Hebel in TradingView: aus Charts wird ein **Benachrichtigungssystem**.
+
+Der typische Fehler: zu viele Alerts → kein Vertrauen mehr.
+
+<h2 id="types">Alert-Arten</h2>
+
+Je nach Plan/Features:
+
+- **Preis**-Alerts (Level, Breakout),
+- **Indikator**-Alerts (RSI, MA, MACD…),
+- **Script/Strategie**-Alerts (Pine),
+- kombinierte Bedingungen.
+
+Regel: ein Alert = eine Aktion (Entry/Exit/Invalidation).
+
+<h2 id="conditions">Multi-Conditions: weniger Rauschen</h2>
+
+Gute Struktur:
+
+- Hauptbedingung (Breakout),
+- Filter (Trend),
+- Kontext (Volumen/Volatilität),
+- klarer Trigger (Close vs intrabar).
+
+Explizit schlägt komplex.
+
+<h2 id="webhooks">Webhooks: Automation mit Disziplin</h2>
+
+Sinnvoll bei Verbindung zu:
+
+- eigenem Server,
+- Automation-Tool,
+- Bot/Plattform.
+
+Minimal-Check:
+
+- stabile Payload,
+- Alert-ID (Dedup),
+- klarer Trigger-Mode,
+- Handling auf Empfängerseite (Idempotenz, Errors).
+
+<h2 id="templates">Templates: standardisieren</h2>
+
+Mini-Bibliothek:
+
+- 3 Kern-Alerts (Entry/Stop/Exit),
+- Naming-Standard (Symbol + TF + Signal),
+- Message-Standard (Symbol, TF, Kontext).
+
+<h2 id="checklist">Checkliste für Zuverlässigkeit</h2>
+
+- Ich weiß, warum der Alert existiert und was ich tun soll.
+- Ich habe auf einem Markt/Timeframe getestet.
+- Ich halte die Zahl aktiver Alerts niedrig.
+- Ich weiß: intrabar oder Close.
+- Bei Webhook: Dedup-Guardrail vorhanden.
+
+Ein zuverlässiger Alert ist besser als 20 laute.
+

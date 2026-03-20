@@ -44,6 +44,30 @@ export default async function EsHomePage() {
             <div className="muted">Funciones, precios, Pine Script, alertas, alternativas.</div>
           </li>
           <li>
+            <Link href="/es/blog/tradingview-pricing-2026">Precios TradingView (2026)</Link>
+            <div className="muted">Elegir plan por límites (alertas, indicadores, datos).</div>
+          </li>
+          <li>
+            <Link href="/es/blog/tradingview-alerts-2026">Alertas TradingView (2026)</Link>
+            <div className="muted">Webhooks, plantillas y checklist de fiabilidad.</div>
+          </li>
+          <li>
+            <Link href="/es/blog/tradingview-pine-script-2026">Pine Script (2026)</Link>
+            <div className="muted">Patrones, backtesting y alertas sin malas prácticas.</div>
+          </li>
+          <li>
+            <Link href="/es/blog/tradingview-brokers-2026">TradingView + brokers (2026)</Link>
+            <div className="muted">Compatibilidad, límites y errores frecuentes.</div>
+          </li>
+          <li>
+            <Link href="/es/blog/tradingview-alternatives-2026">Alternativas a TradingView (2026)</Link>
+            <div className="muted">Elegir según charting, ejecución, automatización.</div>
+          </li>
+          <li>
+            <Link href="/es/blog/tradingview-vs-metatrader-2026">TradingView vs MetaTrader (2026)</Link>
+            <div className="muted">Comparativa centrada en workflow.</div>
+          </li>
+          <li>
             <Link href="/es/bitpanda">Guía Bitpanda</Link>
             <div className="muted">Alternativa cripto: overview + riesgos.</div>
           </li>

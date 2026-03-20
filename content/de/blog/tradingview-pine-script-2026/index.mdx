@@ -1,0 +1,103 @@
+---
+title: "Pine Script (TradingView) 2026: schnell starten ohne schlechte Praxis"
+description: "Pine Script Guide 2026: Indikator vs Strategie, Best Practices, Backtesting, Alerts, einfache Patterns und Qualitäts-Checkliste."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/de/blog/tradingview-pine-script-2026"
+translationKey: "tradingview-pine-script-2026"
+primaryKeyword: "Pine Script"
+jumpLinks:
+  - href: "#indicator-vs-strategy"
+    label: "Indikator vs Strategie"
+  - href: "#patterns"
+    label: "Patterns"
+  - href: "#backtesting"
+    label: "Backtesting"
+  - href: "#alerts"
+    label: "Alerts"
+  - href: "#checklist"
+    label: "Checkliste"
+quickAnswer:
+  - "Starte mit einem einfachen Indikator, baue Regeln dazu und geh erst dann zur Strategie, wenn du Backtesting brauchst."
+  - "Priorität: Klarheit (Trigger), kein unabsichtliches Repainting, reproduzierbare Tests."
+  - "Ein guter Script standardisiert ein Setup — er verspricht keine Performance."
+cta:
+  title: "Ersten sauberen Script bauen"
+  body: "Einfaches Signal + ein Filter + Close-Alert ist der schnellste Weg zu einem brauchbaren Pine-Workflow."
+  buttonLabel: "Pine Editor öffnen"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Wofür ist Pine Script?"
+    a: "Zum Erstellen von Indikatoren und Strategien in TradingView und zum Definieren von Alert-Bedingungen."
+  - q: "Indikator oder Strategie zum Start?"
+    a: "Indikator zuerst, um das Signal zu verstehen. Strategie danach, wenn du Entry/Exit-Regeln backtesten willst."
+  - q: "Was ist Repainting?"
+    a: "Ein Signal sieht im Chart perfekt aus, ändert sich aber nach Kerzenschluss. Trigger klar definieren und Close-Regeln testen."
+  - q: "Kann Pine einen Webhook auslösen?"
+    a: "Indirekt: Pine definiert Bedingungen; TradingView-Alerts auf Basis dieser Bedingungen können Webhooks senden."
+internalLinks:
+  - href: "/de/guide-tradingview"
+    anchor: "TradingView Guide (Pillar)"
+  - href: "/de/blog/blog-tradingview"
+    anchor: "TradingView: kompletter Guide"
+  - href: "/de/blog/tradingview-alerts-2026"
+    anchor: "Alerts: praktisches System"
+  - href: "/de/blog/tradingview-templates-2026"
+    anchor: "Templates: Setups wiederverwenden"
+  - href: "/de/sources"
+    anchor: "Quellen & Checks"
+---
+
+Pine Script ist stark, wenn du damit ein Setup **klärst**, nicht wenn du Komplexität sammelst.
+
+Ziel: Signal lesbar, testbar, reproduzierbar.
+
+<h2 id="indicator-vs-strategy">Indikator vs Strategie</h2>
+
+- **Indikator**: zeigt Zustand (Trend, Momentum, Level).
+- **Strategie**: formalisiert Entries/Exits und Backtesting.
+
+Bester Pfad: Indikator → Alerts → Strategie.
+
+<h2 id="patterns">Nützliche Patterns (einfach)</h2>
+
+Start-Patterns:
+
+- Hauptsignal (Breakout),
+- Trendfilter,
+- Qualitätsfilter (Volumen),
+- Close-Trigger gegen Noise,
+- klare Invalidation.
+
+Kohärenz schlägt Sophistication.
+
+<h2 id="backtesting">Backtesting: verstehen was du testest</h2>
+
+Sinnvoll wenn:
+
+- Regeln explizit,
+- Timeframe stabil,
+- Parameter-Sensitivität akzeptiert.
+
+Nicht “zu fein” optimieren: Overfitting.
+
+<h2 id="alerts">Alerts: erster Production-Use-Case</h2>
+
+Guter Lern-Loop:
+
+1. Pine Condition,
+2. TradingView Alert,
+3. stabile Message,
+4. optional Webhook.
+
+<h2 id="checklist">Qualitäts-Checkliste</h2>
+
+- Signal in 1 Satz erklärbar.
+- Trigger klar (intrabar vs Close).
+- Kein Surprise-Behavior (Repainting).
+- Backtest-Annahmen sinnvoll.
+- Alerts benannt und getestet.
+
+Damit ist dein Script “sauber”.
+

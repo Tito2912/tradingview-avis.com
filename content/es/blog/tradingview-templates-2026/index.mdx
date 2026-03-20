@@ -1,0 +1,101 @@
+---
+title: "Plantillas en TradingView (2026): layouts, presets y alertas reutilizables"
+description: "Guía TradingView templates 2026: organizar layouts, plantillas de gráficos, watchlists y naming de alertas para un workflow reproducible."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/es/blog/tradingview-templates-2026"
+translationKey: "tradingview-templates-2026"
+primaryKeyword: "plantillas TradingView"
+jumpLinks:
+  - href: "#why"
+    label: "Por qué"
+  - href: "#layouts"
+    label: "Layouts"
+  - href: "#charts"
+    label: "Plantillas de gráfico"
+  - href: "#alerts"
+    label: "Plantillas de alertas"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Las plantillas ahorran tiempo y reducen errores: mismo setup, mismo naming, mismas alertas."
+  - "Patrón ganador: un layout por objetivo (scan, ejecución, review) y una plantilla por estrategia."
+  - "Estandarizar alertas (nombre + mensaje) suele ser más rentable que añadir otro indicador."
+cta:
+  title: "Estructurar tu workspace"
+  body: "Crea un layout de scan y otro de ejecución, luego define una plantilla de 3 alertas (entrada/stop/salida)."
+  buttonLabel: "Configurar TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "¿Qué es una plantilla en TradingView?"
+    a: "Una configuración reutilizable: parámetros de gráfico/indicadores, layouts y convenciones de organización."
+  - q: "¿Cuántos layouts necesito?"
+    a: "Normalmente 2–3: scan (detección), ejecución (decisión), review (post-análisis)."
+  - q: "¿Por qué nombrar alertas?"
+    a: "Evitas duplicados y entiendes en segundos qué acción toca cuando llega una notificación."
+  - q: "¿Puedo compartir plantillas?"
+    a: "Puedes compartir setups y scripts según funciones disponibles y permisos de los scripts."
+internalLinks:
+  - href: "/es/guide-tradingview"
+    anchor: "Guía TradingView (pilar)"
+  - href: "/es/blog/tradingview-alerts-2026"
+    anchor: "Alertas: sistema"
+  - href: "/es/blog/tradingview-pine-script-2026"
+    anchor: "Pine Script: lógica limpia"
+  - href: "/es/blog/tradingview-pricing-2026"
+    anchor: "Precios: elegir sin pagar de más"
+---
+
+Las plantillas no mejoran “rentabilidad”. Mejoran **consistencia**.
+
+Consistencia = menos decisiones inútiles y menos errores.
+
+<h2 id="why">Por qué las plantillas son rentables</h2>
+
+Sin plantillas, rehaces constantemente:
+
+- parámetros de indicadores,
+- layouts multi-gráfico,
+- alertas,
+- watchlists.
+
+Eso crea drift y fallos.
+
+<h2 id="layouts">Layouts: un objetivo por pantalla</h2>
+
+Patrón simple:
+
+1. **Scan**: screener + watchlist + un gráfico limpio.
+2. **Ejecución**: multi-timeframe + niveles + plan.
+3. **Review**: journaling y post-análisis.
+
+Cada layout debe tener una función.
+
+<h2 id="charts">Plantillas de gráfico</h2>
+
+Empieza con dos presets:
+
+- “tendencia” (estructura + MA),
+- “momentum” (RSI/MACD + filtro).
+
+Mantén parámetros estables.
+
+<h2 id="alerts">Plantillas de alertas: entrada / stop / salida</h2>
+
+Una plantilla eficaz:
+
+- naming estándar (activo + timeframe + señal),
+- mensaje corto (móvil-friendly),
+- pocas alertas activas.
+
+<h2 id="checklist">Checklist de organización</h2>
+
+- Tengo 2–3 layouts máximo, cada uno con objetivo.
+- Tengo presets estables (tendencia/momentum).
+- Uso un esquema de naming de alertas.
+- Mantengo una plantilla core (entrada/stop/salida).
+- Borro lo que no uso.
+
+Con esta base, TradingView se vuelve un sistema, no solo gráficos.
+

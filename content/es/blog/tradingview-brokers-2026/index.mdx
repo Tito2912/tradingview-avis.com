@@ -1,0 +1,101 @@
+---
+title: "TradingView + brokers (2026): compatibilidad, límites y checklist antes de conectar"
+description: "Guía brokers TradingView 2026: cómo verificar compatibilidad, qué funciona de verdad, límites por país/instrumento y errores frecuentes."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/es/blog/tradingview-brokers-2026"
+translationKey: "tradingview-brokers-2026"
+primaryKeyword: "TradingView brokers"
+jumpLinks:
+  - href: "#compatibility"
+    label: "Compatibilidad"
+  - href: "#limits"
+    label: "Límites"
+  - href: "#workflow"
+    label: "Workflow"
+  - href: "#mistakes"
+    label: "Errores"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "La pregunta no es “TradingView tiene brokers”, sino “mi país, mi instrumento y mi cuenta son compatibles hoy”."
+  - "Incluso si es compatible, prueba primero en paper o con tamaño pequeño: tipos de orden, horarios, latencia y sync."
+  - "Tu plan de TradingView y los datos no sustituyen la calidad de ejecución del broker."
+cta:
+  title: "Verificar compatibilidad primero"
+  body: "Antes de conectar un broker, prueba búsqueda de símbolos, orden y gestión de posición en un caso simple."
+  buttonLabel: "Abrir TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "¿Puedo operar desde TradingView?"
+    a: "Sí, si tu broker está integrado y la función está disponible para tu país e instrumento."
+  - q: "¿Por qué no veo mi broker?"
+    a: "Depende de país, tipo de cuenta e instrumentos. Revisa lista oficial de integraciones y tu elegibilidad."
+  - q: "¿Las órdenes son idénticas al broker nativo?"
+    a: "No siempre. Tipos de orden, mínimos, horarios y opciones pueden variar según la integración."
+  - q: "¿Sustituye una plataforma dedicada?"
+    a: "A veces, pero muchas veces se combina: TradingView para análisis/alertas y broker para ejecución específica."
+internalLinks:
+  - href: "/es/guide-tradingview"
+    anchor: "Guía TradingView (pilar)"
+  - href: "/es/blog/tradingview-pricing-2026"
+    anchor: "Precios: elegir plan"
+  - href: "/es/blog/tradingview-alerts-2026"
+    anchor: "Alertas: sistema"
+  - href: "/es/blog/tradingview-vs-metatrader-2026"
+    anchor: "TradingView vs MetaTrader: comparativa"
+  - href: "/es/sources"
+    anchor: "Fuentes y verificación"
+---
+
+El marketing dice “operar desde TradingView”. En la práctica, depende de **compatibilidad** y **workflow**.
+
+<h2 id="compatibility">Compatibilidad: 3 checks</h2>
+
+Antes de conectar, valida:
+
+1. **País**: no todas las integraciones están disponibles en todos lados.
+2. **Instrumento**: acciones, CFD, forex, cripto… cambia la cobertura.
+3. **Cuenta**: tipo de cuenta, regulación, acceso a mercados.
+
+Si falla alguno, usarás TradingView para analizar y ejecutarás en otro lado.
+
+<h2 id="limits">Límites típicos</h2>
+
+Incluso con integración:
+
+- tipos de orden distintos,
+- restricciones por horario,
+- latencia / sync de posiciones,
+- diferencias en datos (tiempo real, profundidad).
+
+Reflejo: testea el loop completo “señal → orden → posición”.
+
+<h2 id="workflow">Workflow recomendado</h2>
+
+1. plan en TradingView (niveles, invalidación),
+2. paper o tamaño pequeño,
+3. orden,
+4. alertas de invalidación,
+5. review.
+
+Buscas estabilidad.
+
+<h2 id="mistakes">Errores frecuentes</h2>
+
+- conectar sin checks país/instrumento,
+- asumir ejecución idéntica al broker,
+- ignorar horarios y mínimos,
+- confundir plan con datos de mercado.
+
+<h2 id="checklist">Checklist antes de conectar</h2>
+
+- Verifiqué país + instrumento + tipo de cuenta.
+- Probé una operación simple (paper/pequeño).
+- Sé qué tipos de orden hay.
+- Sé cómo sincroniza posiciones.
+- Tengo plan B (broker nativo).
+
+Con esto, la integración aporta comodidad y no sorpresas.
+

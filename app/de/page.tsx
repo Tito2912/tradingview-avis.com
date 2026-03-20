@@ -44,6 +44,30 @@ export default async function DeHomePage() {
             <div className="muted">Features, Pricing, Pine Script, Alerts, Alternativen.</div>
           </li>
           <li>
+            <Link href="/de/blog/tradingview-pricing-2026">TradingView Preise (2026)</Link>
+            <div className="muted">Planwahl nach Limits (Alerts, Indikatoren, Daten).</div>
+          </li>
+          <li>
+            <Link href="/de/blog/tradingview-alerts-2026">TradingView Alerts (2026)</Link>
+            <div className="muted">Webhooks, Templates und Zuverlässigkeits-Checkliste.</div>
+          </li>
+          <li>
+            <Link href="/de/blog/tradingview-pine-script-2026">Pine Script (2026)</Link>
+            <div className="muted">Patterns, Backtesting und Alerts sauber nutzen.</div>
+          </li>
+          <li>
+            <Link href="/de/blog/tradingview-brokers-2026">TradingView + Broker (2026)</Link>
+            <div className="muted">Kompatibilität, Limits und typische Fehler.</div>
+          </li>
+          <li>
+            <Link href="/de/blog/tradingview-alternatives-2026">TradingView Alternativen (2026)</Link>
+            <div className="muted">Auswahl nach Charting, Execution, Automation.</div>
+          </li>
+          <li>
+            <Link href="/de/blog/tradingview-vs-metatrader-2026">TradingView vs MetaTrader (2026)</Link>
+            <div className="muted">Workflow-first Vergleich.</div>
+          </li>
+          <li>
             <Link href="/de/bitpanda">Bitpanda Guide</Link>
             <div className="muted">Krypto-Alternative: Überblick + Risiken.</div>
           </li>

@@ -1,0 +1,103 @@
+---
+title: "TradingView + brokers (2026): compatibility, limits and a checklist before connecting"
+description: "TradingView brokers guide 2026: how to verify compatibility, what truly works, limitations by country/instrument and common mistakes."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/en/blog/tradingview-brokers-2026"
+translationKey: "tradingview-brokers-2026"
+primaryKeyword: "TradingView brokers"
+jumpLinks:
+  - href: "#compatibility"
+    label: "Compatibility"
+  - href: "#limits"
+    label: "Limits"
+  - href: "#workflow"
+    label: "Workflow"
+  - href: "#mistakes"
+    label: "Common mistakes"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "The question isn’t “TradingView has brokers”, it’s “my country, my instrument and my account type are compatible today”."
+  - "Even when compatible, test first in paper/small size: order types, market hours, latency and position sync."
+  - "Your TradingView plan and data access don’t replace broker execution quality."
+cta:
+  title: "Verify compatibility first"
+  body: "Before connecting a broker, test symbol search, order placement and position management on one simple scenario."
+  buttonLabel: "Open TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Can I trade directly from TradingView?"
+    a: "Yes, if your broker is integrated and the feature is available for your country and instrument."
+  - q: "Why can’t I see my broker?"
+    a: "Integrations depend on country, account type and instruments. Check the official integration list and your eligibility."
+  - q: "Are orders identical to the broker platform?"
+    a: "Not always. Order types, minimum sizes, market hours and options can differ depending on the integration."
+  - q: "Does it replace a dedicated trading platform?"
+    a: "Sometimes, but not always. Many workflows keep TradingView for charting/alerts and the broker platform for execution-specific features."
+internalLinks:
+  - href: "/en/guide-tradingview"
+    anchor: "TradingView guide (pillar)"
+  - href: "/en/blog/tradingview-pricing-2026"
+    anchor: "Pricing: choose a plan"
+  - href: "/en/blog/tradingview-alerts-2026"
+    anchor: "Alerts: build a system"
+  - href: "/en/blog/tradingview-vs-metatrader-2026"
+    anchor: "TradingView vs MetaTrader: comparison"
+  - href: "/en/sources"
+    anchor: "Sources & verification"
+---
+
+Marketing says “trade from TradingView”. In practice, your result depends on **compatibility** and **workflow**.
+
+<h2 id="compatibility">Compatibility: 3 checks</h2>
+
+Before connecting anything, validate:
+
+1. **Country**: some integrations are not available everywhere.
+2. **Instrument**: stocks, CFDs, forex, crypto… coverage differs.
+3. **Account**: account type, regulations, market access.
+
+If any of these fails, you’ll use TradingView for charting and execute elsewhere.
+
+<h2 id="limits">Typical limits to expect</h2>
+
+Even with an active integration, you may face:
+
+- different order types,
+- market-hour constraints,
+- latency / position sync quirks,
+- differences in data (real-time, depth).
+
+Best reflex: test the full loop “signal → order → position”.
+
+<h2 id="workflow">Recommended workflow</h2>
+
+Keep it simple:
+
+1. plan on TradingView (levels, invalidation),
+2. paper / small-size test,
+3. place order,
+4. set invalidation alerts,
+5. review.
+
+You’re optimizing stability, not novelty.
+
+<h2 id="mistakes">Common mistakes</h2>
+
+- connecting without checking country/instrument,
+- assuming integration equals identical broker execution,
+- ignoring market hours and minimum sizes,
+- mixing up plan features and market data.
+
+<h2 id="checklist">Checklist before connecting</h2>
+
+- I verified country + instrument + account type.
+- I tested one simple trade (paper/small size).
+- I know available order types.
+- I know how positions sync.
+- I have a fallback (broker native platform).
+
+If you validate this list, integrations become convenience — not bugs.
+

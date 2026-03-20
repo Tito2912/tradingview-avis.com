@@ -1,0 +1,97 @@
+---
+title: "TradingView + Broker (2026): Kompatibilität, Limits und Checkliste vor dem Verbinden"
+description: "TradingView Broker Guide 2026: Kompatibilität prüfen, was wirklich funktioniert, Limits nach Land/Instrument und typische Fehler."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/de/blog/tradingview-brokers-2026"
+translationKey: "tradingview-brokers-2026"
+primaryKeyword: "TradingView Broker"
+jumpLinks:
+  - href: "#compatibility"
+    label: "Kompatibilität"
+  - href: "#limits"
+    label: "Limits"
+  - href: "#workflow"
+    label: "Workflow"
+  - href: "#mistakes"
+    label: "Fehler"
+  - href: "#checklist"
+    label: "Checkliste"
+quickAnswer:
+  - "Die Frage ist nicht “TradingView hat Broker”, sondern “Land + Instrument + Konto sind heute kompatibel”."
+  - "Auch wenn kompatibel: zuerst Paper/klein testen (Ordertypen, Zeiten, Latenz, Sync)."
+  - "Plan und Daten ersetzen keine Broker-Execution."
+cta:
+  title: "Kompatibilität prüfen"
+  body: "Vor dem Verbinden: Symbolsuche, Order, Positionsverwaltung in einem einfachen Szenario testen."
+  buttonLabel: "TradingView öffnen"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Kann ich direkt aus TradingView traden?"
+    a: "Ja, wenn dein Broker integriert ist und die Funktion für Land und Instrument verfügbar ist."
+  - q: "Warum sehe ich meinen Broker nicht?"
+    a: "Integrationen hängen von Land, Konto und Instrument ab. Offizielle Liste und Eligibility prüfen."
+  - q: "Sind Orders identisch zur Broker-Plattform?"
+    a: "Nicht immer. Ordertypen, Minimums, Zeiten und Optionen können je Integration abweichen."
+  - q: "Ersetzt das eine dedizierte Plattform?"
+    a: "Manchmal, oft aber kombiniert: TradingView für Charting/Alerts, Broker-Tooling für Execution-Details."
+internalLinks:
+  - href: "/de/guide-tradingview"
+    anchor: "TradingView Guide (Pillar)"
+  - href: "/de/blog/tradingview-pricing-2026"
+    anchor: "Preise: Planwahl"
+  - href: "/de/blog/tradingview-alerts-2026"
+    anchor: "Alerts: System"
+  - href: "/de/blog/tradingview-vs-metatrader-2026"
+    anchor: "TradingView vs MetaTrader"
+  - href: "/de/sources"
+    anchor: "Quellen & Checks"
+---
+
+Marketing sagt “aus TradingView traden”. In der Praxis hängt alles an **Kompatibilität** und **Workflow**.
+
+<h2 id="compatibility">Kompatibilität: 3 Checks</h2>
+
+Vor dem Verbinden:
+
+1. Land,
+2. Instrument,
+3. Konto/Regulierung.
+
+Wenn eins nicht passt: charting in TradingView, execution anderswo.
+
+<h2 id="limits">Typische Limits</h2>
+
+Auch bei Integration:
+
+- Ordertypen,
+- Marktzeiten,
+- Latenz/Positions-Sync,
+- Datenunterschiede.
+
+Loop testen: “Signal → Order → Position”.
+
+<h2 id="workflow">Empfohlener Workflow</h2>
+
+1. Plan in TradingView,
+2. Paper/klein testen,
+3. Order platzieren,
+4. Invalidation-Alerts,
+5. Review.
+
+<h2 id="mistakes">Typische Fehler</h2>
+
+- ohne Land/Instrument-Check verbinden,
+- Integration = gleiche Execution annehmen,
+- Zeiten/Minimums ignorieren,
+- Plan vs Daten verwechseln.
+
+<h2 id="checklist">Checkliste</h2>
+
+- Land + Instrument + Konto geprüft.
+- Simple Trade getestet.
+- Ordertypen bekannt.
+- Sync-Verhalten verstanden.
+- Fallback vorhanden.
+

@@ -1,0 +1,111 @@
+---
+title: "Alertes TradingView (2026) : serveur, webhooks, templates & erreurs à éviter"
+description: "Guide TradingView alerts 2026 : alertes serveur vs client, multi-conditions, webhooks, templates et checklist de fiabilité."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/tradingview-alerts-2026"
+translationKey: "tradingview-alerts-2026"
+primaryKeyword: "alertes TradingView"
+jumpLinks:
+  - href: "#types"
+    label: "Types d’alertes"
+  - href: "#conditions"
+    label: "Multi‑conditions"
+  - href: "#webhooks"
+    label: "Webhooks"
+  - href: "#templates"
+    label: "Templates"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Les alertes serveur sont utiles car elles continuent même si votre navigateur est fermé."
+  - "La fiabilité vient d’un principe simple : peu d’alertes, bien nommées, testées sur un actif et une unité de temps précise."
+  - "Si vous utilisez des webhooks, testez votre payload et prévoyez des garde-fous (doublons, latence, marché fermé)."
+cta:
+  title: "Tester les alertes TradingView"
+  body: "Créez 3 alertes simples sur vos actifs (breakout, stop, confirmation) et vérifiez qu’elles se déclenchent comme prévu."
+  buttonLabel: "Ouvrir TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Les alertes fonctionnent-elles si je ferme TradingView ?"
+    a: "Oui, si vous utilisez des alertes serveur. Elles continuent de tourner côté TradingView et vous notifie selon le canal choisi."
+  - q: "Pourquoi mes alertes se déclenchent trop souvent ?"
+    a: "Souvent parce que la condition est trop large (ex. croisement bruité), l’unité de temps mal choisie, ou parce que vous n’avez pas ajouté de filtre (tendance, close vs intrabar)."
+  - q: "À quoi sert un webhook TradingView ?"
+    a: "À envoyer un message HTTP à un service externe (bot, serveur, automation) quand l’alerte se déclenche."
+  - q: "Quelle est la meilleure pratique pour éviter les doublons ?"
+    a: "Nommer les alertes, limiter le nombre d’alertes actives, utiliser des conditions “once per bar close” quand pertinent, et gérer l’idempotence côté réception (webhook)."
+internalLinks:
+  - href: "/guide-tradingview"
+    anchor: "Guide TradingView (pilier)"
+  - href: "/tradingview-pricing-2026"
+    anchor: "TradingView tarifs : choisir un plan"
+  - href: "/tradingview-templates-2026"
+    anchor: "Templates TradingView : layouts, indicateurs, alertes"
+  - href: "/tradingview-pine-script-2026"
+    anchor: "Pine Script : créer des signaux propres"
+  - href: "/sources"
+    anchor: "Sources & vérifications"
+---
+
+Les alertes sont l’un des meilleurs leviers de TradingView : elles transforment un graphique “passif” en **système de notification**.
+
+Le piège classique : multiplier les alertes et finir par ne plus leur faire confiance.
+
+<h2 id="types">Types d’alertes</h2>
+
+Vous allez croiser (selon plan et fonctionnalités) plusieurs catégories :
+
+- alertes sur **prix** (niveau, cassure, variation),
+- alertes sur **indicateurs** (RSI, MA, MACD…),
+- alertes sur **stratégies / scripts** (Pine Script),
+- alertes liées à une condition “composite” (combiner plusieurs signaux).
+
+La règle d’or : une alerte = un objectif clair (entrée, sortie, invalidation).
+
+<h2 id="conditions">Multi‑conditions : réduire le bruit</h2>
+
+Pour éviter les faux signaux, vous pouvez structurer vos alertes autour de :
+
+- **une condition principale** (ex. cassure d’un niveau),
+- **un filtre** (ex. tendance haussière sur une MA),
+- **un contexte** (ex. volume ou volatilité),
+- et une règle de déclenchement (ex. “à la clôture” plutôt qu’intrabar).
+
+Plus votre règle est explicite, plus l’alerte est utile.
+
+<h2 id="webhooks">Webhooks : automatisation, mais discipline</h2>
+
+Un webhook est pertinent si vous connectez TradingView à :
+
+- un serveur perso,
+- un outil d’automatisation,
+- un bot ou une plateforme externe.
+
+Checklist webhook minimaliste :
+
+- un message/payload **stable** (format constant),
+- un identifiant d’alerte (pour éviter les doublons),
+- un mode de déclenchement clair (ex. bar close),
+- une gestion côté serveur (idempotence, erreurs, retries).
+
+<h2 id="templates">Templates : standardiser ce qui marche</h2>
+
+Vous gagnez beaucoup en construisant une “bibliothèque” :
+
+- 3 alertes “core” (entrée / stop / sortie),
+- un modèle de nommage (actif + timeframe + signal),
+- un modèle de message (actif, prix, timeframe, contexte).
+
+Ce sont vos templates qui rendent votre système reproductible.
+
+<h2 id="checklist">Checklist de fiabilité</h2>
+
+- Je sais **pourquoi** l’alerte existe (et quelle action elle déclenche).
+- Je l’ai testée sur 1 actif et 1 timeframe (avant de dupliquer).
+- J’ai limité le nombre d’alertes actives pour rester lisible.
+- Je sais si elle déclenche intrabar ou à la clôture.
+- Si webhook : j’ai un garde-fou contre les doublons.
+
+Si votre objectif est de “ne pas rater un mouvement”, souvenez‑vous : une alerte fiable vaut mieux que 20 alertes bruyantes.

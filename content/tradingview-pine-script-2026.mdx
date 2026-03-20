@@ -1,0 +1,104 @@
+---
+title: "Pine Script (TradingView) en 2026 : débuter vite sans coder n’importe quoi"
+description: "Guide Pine Script 2026 : indicateur vs stratégie, bonnes pratiques, backtesting, alertes, patterns simples et checklist de qualité."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/tradingview-pine-script-2026"
+translationKey: "tradingview-pine-script-2026"
+primaryKeyword: "Pine Script"
+jumpLinks:
+  - href: "#indicateur-vs-strategie"
+    label: "Indicateur vs stratégie"
+  - href: "#patterns"
+    label: "Patterns utiles"
+  - href: "#backtesting"
+    label: "Backtesting"
+  - href: "#alertes"
+    label: "Alertes"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Commencez par un indicateur simple, puis ajoutez des règles, avant de passer à une stratégie complète."
+  - "Votre priorité n’est pas la “complexité”, mais la clarté : signaux explicites, pas de repaint involontaire, tests reproductibles."
+  - "Un bon script sert à standardiser un setup, pas à promettre une performance."
+cta:
+  title: "Construire un premier script propre"
+  body: "Partir d’un indicateur simple, ajouter un filtre, puis déclencher une alerte à la clôture est le meilleur chemin pour apprendre."
+  buttonLabel: "Ouvrir l’éditeur Pine"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Pine Script sert à quoi ?"
+    a: "À créer des indicateurs et des stratégies (avec backtesting) directement dans TradingView, et à exposer des conditions d’alertes."
+  - q: "Indicateur ou stratégie pour débuter ?"
+    a: "Indicateur d’abord : vous comprenez le signal. Ensuite seulement, une stratégie si vous voulez backtester une logique d’entrée/sortie."
+  - q: "C’est quoi le “repaint” ?"
+    a: "Un signal qui semble parfait dans le passé mais qui change quand la bougie se termine. Il faut définir clairement le déclenchement (intrabar vs clôture) et tester."
+  - q: "Peut-on déclencher un webhook via Pine ?"
+    a: "Oui, via les alertes TradingView basées sur des conditions de script. Ensuite, le webhook envoie le message à un service externe."
+internalLinks:
+  - href: "/guide-tradingview"
+    anchor: "Guide TradingView (pilier)"
+  - href: "/blog-tradingview"
+    anchor: "TradingView : guide complet"
+  - href: "/tradingview-alerts-2026"
+    anchor: "Alertes TradingView : guide complet"
+  - href: "/tradingview-templates-2026"
+    anchor: "Templates : réutiliser vos setups"
+  - href: "/sources"
+    anchor: "Sources officielles et checks"
+---
+
+Pine Script est un super pouvoir… si vous l’utilisez pour **clarifier** un setup, pas pour “inventer” un signal magique.
+
+L’objectif : obtenir un signal reproductible, lisible, testable.
+
+<h2 id="indicateur-vs-strategie">Indicateur vs stratégie</h2>
+
+- Un **indicateur** affiche un état (tendance, momentum, zones, niveaux).
+- Une **stratégie** formalise des règles d’entrée/sortie et permet un backtesting.
+
+Débutant : indicateur → alertes → stratégie. C’est le chemin le plus robuste.
+
+<h2 id="patterns">Patterns utiles (simples et efficaces)</h2>
+
+Quelques patterns qui fonctionnent bien pour apprendre :
+
+- signal de base (ex. cassure),
+- filtre de tendance (ex. MA longue),
+- filtre de qualité (ex. volume),
+- déclenchement à la clôture (réduit le bruit),
+- sortie/invalidation (stop logique).
+
+Ce n’est pas la sophistication qui fait la qualité : c’est la cohérence.
+
+<h2 id="backtesting">Backtesting : comprendre ce que vous testez</h2>
+
+Un backtest est utile si :
+
+- vous testez une règle clairement définie,
+- vous avez un horizon (timeframe) stable,
+- vous acceptez que les résultats dépendent du marché et des paramètres.
+
+Évitez d’optimiser trop finement : vous sur‑apprenez.
+
+<h2 id="alertes">Alertes : votre premier cas d’usage “production”</h2>
+
+Un excellent exercice :
+
+1. signal simple (condition Pine),
+2. alerte TradingView basée sur la condition,
+3. message stable (actif, timeframe, signal),
+4. éventuellement webhook.
+
+Vous apprenez ainsi à transformer un script en workflow.
+
+<h2 id="checklist">Checklist qualité (avant de partager/dupliquer)</h2>
+
+- Le signal est compréhensible en 1 phrase.
+- Le déclenchement est clair (intrabar vs clôture).
+- Le script évite les comportements “surprise” (repaint involontaire).
+- Le backtest a du sens (période, actif, timeframe).
+- Les alertes sont nommées et testées.
+
+Si vous validez cette checklist, vous avez déjà un script “propre” — et c’est rare.

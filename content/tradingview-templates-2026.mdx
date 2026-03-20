@@ -1,0 +1,102 @@
+---
+title: "Templates TradingView (2026) : layouts, indicateurs, stratégies & alertes réutilisables"
+description: "Guide TradingView templates 2026 : organiser vos layouts, templates de graphiques, watchlists et alertes pour un workflow reproductible."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/tradingview-templates-2026"
+translationKey: "tradingview-templates-2026"
+primaryKeyword: "templates TradingView"
+jumpLinks:
+  - href: "#pourquoi"
+    label: "Pourquoi"
+  - href: "#layouts"
+    label: "Layouts"
+  - href: "#indicateurs"
+    label: "Templates de graphiques"
+  - href: "#alertes"
+    label: "Templates d’alertes"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Les templates servent à gagner du temps et réduire les erreurs : même setup, même nommage, mêmes alertes."
+  - "Le meilleur pattern : 1 layout par workflow (scanning, execution, review) + 1 template par stratégie."
+  - "Standardiser vos alertes (nom + message) est souvent plus rentable que rajouter un indicateur."
+cta:
+  title: "Structurer votre workspace"
+  body: "Créez un layout “scan” et un layout “execution”, puis un template d’alertes (entrée/stop/sortie)."
+  buttonLabel: "Configurer TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "C’est quoi un template sur TradingView ?"
+    a: "Une façon de sauvegarder et réutiliser une configuration : layout, paramètres d’indicateurs, watchlists et parfois logique d’alertes selon votre organisation."
+  - q: "Combien de layouts faut-il ?"
+    a: "Souvent 2 ou 3 suffisent : scan (détection), execution (décision), review (retour d’expérience)."
+  - q: "Pourquoi nommer ses alertes ?"
+    a: "Parce que vous réduisez les doublons et vous comprenez immédiatement l’action attendue quand l’alerte arrive."
+  - q: "Peut-on partager un template ?"
+    a: "Oui, vous pouvez partager des setups (layouts/scripts) selon les fonctionnalités de la plateforme et les droits des scripts utilisés."
+internalLinks:
+  - href: "/guide-tradingview"
+    anchor: "Guide TradingView (pilier)"
+  - href: "/tradingview-alerts-2026"
+    anchor: "Alertes : guide complet"
+  - href: "/tradingview-pine-script-2026"
+    anchor: "Pine Script : scripts propres"
+  - href: "/tradingview-pricing-2026"
+    anchor: "Tarifs : choisir sans surpayer"
+---
+
+Les templates ne font pas “gagner des performances”. Ils font gagner **du temps** et de la **discipline**.
+
+Un bon template réduit les décisions inutiles : vous voyez les mêmes repères, vous déclenchez les mêmes alertes, vous comparez les mêmes marchés.
+
+<h2 id="pourquoi">Pourquoi les templates sont rentables</h2>
+
+Sans templates, vous recréez :
+
+- des paramètres d’indicateurs,
+- des layouts multi‑graphiques,
+- des alertes,
+- des watchlists.
+
+Résultat : erreurs, incohérences, et fatigue mentale.
+
+<h2 id="layouts">Layouts : 1 objectif par écran</h2>
+
+Le pattern le plus simple :
+
+1. **Scan** : screeners + watchlist + 1 graphique propre.
+2. **Execution** : multi‑timeframes + niveaux + plan.
+3. **Review** : journaling / analyse après coup.
+
+Chaque layout doit servir un objectif, sinon il devient du bruit.
+
+<h2 id="indicateurs">Templates de graphiques (indicateurs)</h2>
+
+Commencez par 2 templates :
+
+- un template “tendance” (MA + structure),
+- un template “momentum” (RSI/MACD + filtre).
+
+Gardez vos paramètres stables, sinon vous ne savez plus ce que vous comparez.
+
+<h2 id="alertes">Templates d’alertes : standardiser entrée / stop / sortie</h2>
+
+Un template d’alertes efficace :
+
+- suit un **naming** (actif + timeframe + signal),
+- a un message court (action + contexte),
+- limite le nombre d’alertes actives.
+
+Votre alerte doit être lisible sur mobile, en 2 secondes.
+
+<h2 id="checklist">Checklist d’organisation</h2>
+
+- J’ai 2–3 layouts maximum, chacun avec un objectif.
+- J’ai 2 templates d’indicateurs stables (tendance / momentum).
+- J’ai un naming standard pour les alertes.
+- J’ai un template d’alertes “entrée/stop/sortie”.
+- Je supprime ce que je n’utilise pas (moins, c’est mieux).
+
+Une fois cette base en place, TradingView devient un outil “système”, pas juste un graphique.

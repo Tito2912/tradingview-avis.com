@@ -1,0 +1,112 @@
+---
+title: "TradingView alerts (2026): server-side rules, webhooks, templates & common mistakes"
+description: "TradingView alerts guide 2026: server vs client alerts, multi-condition setups, webhooks, naming templates and a reliability checklist."
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+type: "guide"
+canonical: "/en/blog/tradingview-alerts-2026"
+translationKey: "tradingview-alerts-2026"
+primaryKeyword: "TradingView alerts"
+jumpLinks:
+  - href: "#types"
+    label: "Alert types"
+  - href: "#conditions"
+    label: "Multi-conditions"
+  - href: "#webhooks"
+    label: "Webhooks"
+  - href: "#templates"
+    label: "Templates"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Server-side alerts are valuable because they keep running even when your browser is closed."
+  - "Reliability comes from simplicity: fewer alerts, good naming, and testing on one market/timeframe before scaling."
+  - "If you use webhooks, test your payload and add guardrails (duplicates, latency, market closed)."
+cta:
+  title: "Test alerts with a simple set"
+  body: "Create 3 core alerts on one instrument (entry, invalidation, exit) and verify they fire as expected."
+  buttonLabel: "Open TradingView"
+  buttonHref: "https://fr.tradingview.com/?aff_id=152551"
+faq:
+  - q: "Do alerts work if I close TradingView?"
+    a: "Yes if they are server-side alerts. They keep running on TradingView’s side and notify you via the chosen channel."
+  - q: "Why do my alerts trigger too often?"
+    a: "Usually because conditions are too broad, the timeframe is wrong, or you’re triggering intrabar without a close filter."
+  - q: "What is a TradingView webhook used for?"
+    a: "To send an HTTP message to an external service (bot, server, automation) when an alert triggers."
+  - q: "How do I avoid duplicates?"
+    a: "Name alerts consistently, use close-based triggers when appropriate, and handle idempotency on the receiving side."
+internalLinks:
+  - href: "/en/guide-tradingview"
+    anchor: "TradingView guide (pillar)"
+  - href: "/en/blog/tradingview-pricing-2026"
+    anchor: "TradingView pricing: choose a plan"
+  - href: "/en/blog/tradingview-templates-2026"
+    anchor: "Templates: layouts and reusable alerts"
+  - href: "/en/blog/tradingview-pine-script-2026"
+    anchor: "Pine Script: clean signals"
+  - href: "/en/sources"
+    anchor: "Sources & verification"
+---
+
+Alerts are one of TradingView’s best features: they turn charting into a **notification system**.
+
+The classic failure mode is creating too many alerts and losing trust in them.
+
+<h2 id="types">Alert types</h2>
+
+Depending on plan/features, you’ll see:
+
+- **price** alerts (levels, breaks),
+- **indicator** alerts (RSI, MA, MACD…),
+- **script/strategy** alerts (Pine Script),
+- composite conditions (multiple signals).
+
+Rule of thumb: one alert = one action (enter, exit, invalidate).
+
+<h2 id="conditions">Multi-conditions: reduce noise</h2>
+
+A reliable structure is:
+
+- one primary condition (breakout),
+- one filter (trend),
+- one context check (volume/volatility),
+- a clear trigger rule (bar close vs intrabar).
+
+Explicit rules beat complicated rules.
+
+<h2 id="webhooks">Webhooks: automation with discipline</h2>
+
+Webhooks make sense if you connect to:
+
+- your server,
+- an automation tool,
+- a bot/external platform.
+
+Minimal webhook checklist:
+
+- stable payload format,
+- alert identifier (to dedupe),
+- clear trigger mode (e.g. bar close),
+- receiving-side handling (idempotency, errors).
+
+<h2 id="templates">Templates: standardize what works</h2>
+
+Build a small “library”:
+
+- 3 core alerts (entry / stop / exit),
+- naming standard (instrument + timeframe + signal),
+- message standard (instrument, timeframe, context).
+
+Templates make your system reproducible.
+
+<h2 id="checklist">Reliability checklist</h2>
+
+- I know why this alert exists (and the action it triggers).
+- I tested it on one market/timeframe before duplicating.
+- I keep the number of active alerts low and readable.
+- I know if it triggers intrabar or on close.
+- If webhook: I have a dedupe guardrail.
+
+One reliable alert beats twenty noisy alerts.
+
