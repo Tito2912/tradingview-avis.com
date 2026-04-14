@@ -112,7 +112,10 @@ export default async function EnBlogPage() {
 
       <section className="card" aria-label="Call to action">
         <h2>Ready to try TradingView?</h2>
-        <p className="muted">Advanced charts, indicators, server alerts and broker integrations.</p>
+        <p className="muted">
+          Advanced charts, indicators, server alerts and broker integrations. New users: personal $15 promo code emailed after the first
+          purchase (valid 12 months, not applicable on sale prices).
+        </p>
         <a
           className="cta-btn big"
           href="https://fr.tradingview.com/?aff_id=152551"

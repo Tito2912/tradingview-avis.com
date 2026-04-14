@@ -112,7 +112,10 @@ export default async function BlogPage() {
 
       <section className="card" aria-label="Appel à l’action">
         <h2>Prêt à essayer TradingView ?</h2>
-        <p className="muted">Graphiques avancés, indicateurs, alertes serveur et intégrations courtiers.</p>
+        <p className="muted">
+          Graphiques avancés, indicateurs, alertes serveur et intégrations courtiers. Nouveaux utilisateurs : code promo personnel de 15 $
+          envoyé par email après le 1er achat (valable 12 mois, hors promotions).
+        </p>
         <a
           className="cta-btn big"
           href="https://fr.tradingview.com/?aff_id=152551"

@@ -112,7 +112,10 @@ export default async function DeBlogPage() {
 
       <section className="card" aria-label="Aufruf zur Aktion">
         <h2>Bereit, TradingView zu versuchen?</h2>
-        <p className="muted">Erweiterte Diagramme, Indikatoren, Server-Alarme und Broker-Integrationen.</p>
+        <p className="muted">
+          Erweiterte Diagramme, Indikatoren, Server-Alarme und Broker-Integrationen. Neue Nutzer: persönlicher 15-$-Promo-Code per E-Mail
+          nach dem ersten Kauf (12 Monate gültig, nicht bei Sonderangeboten).
+        </p>
         <a
           className="cta-btn big"
           href="https://fr.tradingview.com/?aff_id=152551"
