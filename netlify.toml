@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && node scripts/ping-indexnow.cjs"
   publish = "out"
 
 # ----------------------------
@@ -71,4 +71,3 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-

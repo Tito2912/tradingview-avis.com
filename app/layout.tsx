@@ -3,6 +3,7 @@ import './globals.css';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { LangHtmlUpdater } from '@/components/LangHtmlUpdater';
+import { CookieBanner } from '@/components/CookieBanner';
 
 export const viewport: Viewport = {
   themeColor: '#2b78ff',
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main className="container">{children}</main>
         <SiteFooter />
+        <CookieBanner />
       </body>
     </html>
   );

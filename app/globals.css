@@ -809,3 +809,41 @@ pre {
     max-width: 140px;
   }
 }
+
+/* ------------------------------
+   10) Cookie banner (GA4 opt-in)
+------------------------------ */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid var(--border);
+  background: rgba(18, 28, 51, 0.95);
+  backdrop-filter: saturate(1.2) blur(10px);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.cookie-banner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cookie-banner.hidden {
+  display: none;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}

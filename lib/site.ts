@@ -1,6 +1,7 @@
 export const SITE = {
   baseUrl: 'https://tradingview-avis.com',
   domain: 'tradingview-avis.com',
+  ga4Id: 'G-EFTTSY036T',
   defaultLang: 'fr',
   supportedLangs: ['fr', 'en', 'es', 'de'] as const,
 } as const;
