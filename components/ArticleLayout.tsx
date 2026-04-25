@@ -5,6 +5,8 @@ import { CTABox } from '@/components/CTABox';
 import type { Post } from '@/lib/types';
 
 export function ArticleLayout({ post }: { post: Post }) {
+  const showTradingViewBanner = post.slug.toLowerCase().includes('tradingview');
+
   return (
     <article className="article stack">
       <header>
@@ -40,6 +42,27 @@ export function ArticleLayout({ post }: { post: Post }) {
                   <li key={x}>{x}</li>
                 ))}
               </ul>
+            </section>
+          ) : null}
+
+          {showTradingViewBanner ? (
+            <section aria-label="TradingView banner" className="card">
+              <a
+                aria-label="Ouvrir TradingView (bannière sponsorisée)"
+                href="https://www.awin1.com/cread.php?s=4612099&v=117793&q=590384&r=2738708"
+                rel="sponsored nofollow noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  src="https://www.awin1.com/cshow.php?s=4612099&v=117793&q=590384&r=2738708"
+                  alt="TradingView"
+                  width="936"
+                  height="120"
+                  loading="lazy"
+                  decoding="async"
+                  style={{ display: 'block', maxWidth: '100%', height: 'auto', border: 0 }}
+                />
+              </a>
             </section>
           ) : null}
 
